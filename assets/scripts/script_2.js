@@ -12,7 +12,7 @@ var margin = {top: 30, right: 0, bottom: 20, left: 0},
     transitioning;
 
 var color = d3.scaleLinear().domain([0, 1/4*5000000, 2/4*5000000, 3/4*5000000, 5000000]).range(["#0000ff", "#cc99ff", "#cbe0a7", "#f2db84"]);
-//"#73c3bf" ,#a1d8c8
+//"#73c3bf" ,#a1d8c8, #cbe0a7", "#f2db84"
 // sets x and y scale to determine size of visible boxes
 var x = d3.scaleLinear()
     .domain([0, width])
