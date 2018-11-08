@@ -7,69 +7,56 @@
     <link href="assets/stylesheets/style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	
-   
-    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 </head>
-	   <audio id="sound" src="beep.mp3"></audio>
-    <a onmouseover = "playSound();"></a>
-    <script>
-        function playSound() {
-          var sound = document.getElementById("sound");
-          sound.play();
-      }    
-	    
-	  </script>    
-	    
+  <header>
+       <nav>
+    <ul>
+      <li><a href="#top" >Top</a></li>
+      <li><a href="#national">National</a></li>
+      <li><a href="#regional">Regional</a></li>
+      <li><a href="#state">State-Level</a></li>
+    <ul>
+        </nav>
     </header>
- <ul>
-      <li><a href="#top" onmouseover="playSound();">Top</a></li>
-      <li><a href="#national" onmouseover="playSound();">National</a></li>
-      <li><a href="#regional" onmouseover="playSound();">Regional</a></li>
-      <li><a href="#state" onmouseover="playSound();">State-Level</a></li>
-    <ul>  	       
 <body>
-     <a name="national"></a>
-    <h1 class="title" onmouseover="responsiveVoice.speak('Educational Attainment in the United States');" onmouseleave="responsiveVoice.cancel();">Educational Attainment in the United States</h1>
-    <br>
-    <h2 class="subtitle" onmouseover="responsiveVoice.speak('Nation-Wide Education Level of Population in Schooling');" onmouseleave="responsiveVoice.cancel();">Nation-Wide Education Level of Population in Schooling</h2>
+    <h1 class="title">Educational Attainment in the United States</h1>
+        
 	
-    <div class="container">
-	<svg id="pie-chart" onmouseover="responsiveVoice.speak('Pie Chart of Nation-Wide Education Level of Population in Schooling');" viewBox="0 0 960 450">
-	</svg>
-    </div>
-    <a name="regional"></a>
-    <br><br><br>
-    <h2 class="subtitle" onmouseover="responsiveVoice.speak('Educational Attainment: Region-level Breakdown of University Students');" onmouseleave="responsiveVoice.cancel();">Educational Attainment: Region-level Breakdown of University Students</h2>
+	<p><br></p>
+    <h2 class="subtitle">Nation-Wide Education Level of Population in Schooling</h2>
+	
+    <svg id="pie-chart" width="960" height="450"></svg><a name="regional"></a>
+    <p><br><br><br></p>
+    <h2 class="subtitle">Educational Attainment: Region-level Breakdown of University Students</h2>
 	
     <form id="tree-form">
         <div class="radio-toolbar">
             <input type="radio" id="mode1" name="treeSum" value="number" checked>
-            <label for="mode1" onmouseover="responsiveVoice.speak('Pursuing a Masters degree (in # of students)');" onmouseleave="responsiveVoice.cancel();">Pursuing a Masters degree (in # of students)</label>
+            <label for="mode1">Pursuing a Masters degree (in # of students)</label>
             <input type="radio" id="mode2" name="treeSum" value="percent">
-            <label for="mode2" onmouseover="responsiveVoice.speak('Pursuing a Masters degree (in %)');" onmouseleave="responsiveVoice.cancel();">Pursuing a Masters degree (in %)</label>
+            <label for="mode2">Pursuing a Masters degree (in %)</label>
             <input type="radio" id="mode3" name="treeSum" value="male">
-            <label for="mode3" onmouseover="responsiveVoice.speak('Males in College (18-24yrs)(in %)');" onmouseleave="responsiveVoice.cancel();">Males in College (18-24yrs)(in %)</label>
+            <label for="mode3">Males in College (18-24yrs)(in %)</label>
             <input type="radio" id="mode4" name="treeSum" value="femal">
-            <label for="mode4" onmouseover="responsiveVoice.speak('Females in College (18-24yrs) (in %)');" onmouseleave="responsiveVoice.cancel();">Females in College (18-24yrs) (in %)</label>
+            <label for="mode4">Females in College (18-24yrs) (in %)</label>
         </div>
     </form>
 	<p></p>
-    <div id="chart"onmouseover="responsiveVoice.speak('Chart of Educational Attainment: Region-level Breakdown of University Students');" align="center"></div>
+    <div id="chart"></div>
 	<a name="state"></a>
-    <br><br>
-    <h2 class="subtitle" onmouseover="responsiveVoice.speak('Education Level of Population in Schooling: State-level Breakdown');" onmouseleave="responsiveVoice.cancel();">Education Level of Population in Schooling: State-level Breakdown</h2>
-
+    <p><br><br></p>
+    <h2 class="subtitle">Education Level of Population in Schooling: State-level Breakdown</h2>
+	
     <form id="stack-form">
         <div class="radio-toolbar">
             <input type="radio" id="radio1" name="mode" value="bypercent" checked>
-            <label for="radio1" onmouseover="responsiveVoice.speak('Students (in %)');" onmouseleave="responsiveVoice.cancel();">Students (in %)</label>
+            <label for="radio1">Students (in %)</label>
             <input type="radio" id="radio2" name="mode" value="bycount">
-            <label for="radio2" onmouseover="responsiveVoice.speak('Students (in number of people)');" onmouseleave="responsiveVoice.cancel();">Students (in number of people)</label>
+            <label for="radio2">Students (in number of people)</label>
     </div>
     </form>
-	<div>
-        <svg id="stacked-bar-chart" onmouseover="responsiveVoice.speak('Stacked bar chart of Education Level of Population in Schooling: State-level Breakdown');" align="center"></svg>
+    <div>
+        <svg id="stacked-bar-chart"></svg>
     </div>
 
     
@@ -78,50 +65,6 @@
 <script src="assets/scripts/script_1.js"></script>
 <script src="assets/scripts/script_2.js"></script>
 <script src="assets/scripts/script_3.js"></script>
-<script>
-    $( document ).ready(function() {
-      $(window).scroll(function(){
-        if ($(window).scrollTop() >= 300) {
-           $('nav').addClass('fixed-header');
-        }
-        else {
-           $('nav').removeClass('fixed-header');
-        }
-    });
-});
-   	
-/* scrollTop() >= 240
-   Should be equal the the height of the header
-   /*  
-	       <meta name="viewport" content="width=device-width, initial-scale=1.0"> den doulevi den ksero giati!!
-	*/
-	      
-</script>
-	<audio>
-<source src="Mouse Click Fast (online-audio-converter.com).mp3"></source>
-<source src="Mouse Click Fast (online-audio-converter.com).ogg"></source>
-</audio>
-
-<div id="sounddiv"><bgsound id="sound"></div>
-
-</body>
-</html>
-
-    </div>
-
-    
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="assets/scripts/script_1.js"></script>
-<script src="assets/scripts/script_2.js"></script>
-<script src="assets/scripts/script_3.js"></script>
-<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script>
     $( document ).ready(function() {
       $(window).scroll(function(){
