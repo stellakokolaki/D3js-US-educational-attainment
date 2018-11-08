@@ -4,25 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Educational Attainment in the United States</title>
+    <link href="assets/stylesheets/style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
   <header>
-       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-   <div class="container-fluid">
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-	<span class="navbar-toggler-icon"></span>
-	
-	</button>
-  <div class="collapse navbar-collapse" id="navbarResponsive">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active"><a class="nav-link" href="#top"onmouseover="playclip();" >Top</a></li>
-      <li class="nav-item active"><a class="nav-link" href="#national"onmouseover="playclip();">National</a></li>
-      <li class="nav-item active"><a class="nav-link" href="#regional"onmouseover="playclip();">Regional</a></li>
-      <li class="nav-item active"><a class="nav-link" href="#state"onmouseover="playclip();">State-Level</a></li>
+       <nav>
     <ul>
-   </div>
-   </div>
+      <li><a href="#top" >Top</a></li>
+      <li><a href="#national">National</a></li>
+      <li><a href="#regional">Regional</a></li>
+      <li><a href="#state">State-Level</a></li>
+    <ul>
         </nav>
     </header>
 <body>
@@ -87,20 +80,6 @@
    Should be equal the the height of the header
  */
 </script>
-<script>
-$(document).ready(function(){
-    $("h1, h2, label").mouseenter(function(){
-		responsiveVoice.cancel(); 
-  		responsiveVoice.speak($(this).text(), 'UK English Female');
-});
-    $("h1, h2, label").mouseleave(function(){
-        responsiveVoice.cancel();
-    	});
-});
-</script>
+
 </body>
- <audio>
-	<source src="beep.mp3">
-</audio>
-<div id="sounddiv"><bgsound id="sound"></div>
 </html>
