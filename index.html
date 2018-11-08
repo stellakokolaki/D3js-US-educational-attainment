@@ -3,18 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Educational Attainment in the United States</title>
     <link href="assets/stylesheets/style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <script type="text/javascript" src="assets/on_hover.js"></script>
     <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+	
 </head>
   <header>
-	    <header>
 	   <audio id="sound" src="beep.mp3"></audio>
     <a onmouseover = "playSound();"></a>
     <script>
@@ -23,51 +19,52 @@
           sound.play();
       }    
 	    
-	  </script>   
+	  </script>    
+	    
        <nav>
     <ul>
-      <li><a href="#top" onmouseover="playclip();" >Top</a></li>
-      <li><a href="#national" onmouseover="playclip();" >National</a></li>
-      <li><a href="#regional" onmouseover="playclip();" >Regional</a></li>
-      <li><a href="#state" onmouseover="playclip();" >State-Level</a></li>
+      <li><a href="#top" onmouseover="playSound();" >Top</a></li>
+      <li><a href="#national" onmouseover="playSound();">National</a></li>
+      <li><a href="#regional" onmouseover="playSound();">Regional</a></li>
+      <li><a href="#state" onmouseover="playSound();">State-Level</a></li>
     <ul>
         </nav>
     </header>
 <body>
-    <h1 class="title">Educational Attainment in the United States</h1>
+    <h1 class="title"onmouseover="responsiveVoice.speak('Educational Attainment in the United States','US English Male');" onmouseleave="responsiveVoice.cancel();">Educational Attainment in the United States</h1>
         
 	
 	<p><br></p>
-    <h2 class="subtitle">Nation-Wide Education Level of Population in Schooling</h2>
+    <h2 class="subtitle"onmouseover="responsiveVoice.speak('Nation-Wide Education Level of Population in Schooling','US English Male');" onmouseleave="responsiveVoice.cancel();">Nation-Wide Education Level of Population in Schooling</h2>
 	
-    <svg id="pie-chart" width=100% height=50%></svg><a name="regional"></a>
+    <svg id="pie-chart" width="960" height="450"></svg><a name="regional"></a>
     <p><br><br><br></p>
-    <h2 class="subtitle">Educational Attainment: Region-level Breakdown of University Students</h2>
+    <h2 class="subtitle" onmouseover="responsiveVoice.speak('Educational Attainment: Region-level Breakdown of University Students','US English Male');" onmouseleave="responsiveVoice.cancel();">Educational Attainment: Region-level Breakdown of University Students</h2>
 	
     <form id="tree-form">
         <div class="radio-toolbar">
-            <input type="radio" id="mode1" name="treeSum" value="number" checked>
-            <label for="mode1">Pursuing a Masters degree (in # of students)</label>
+                  <input type="radio" id="mode1" name="treeSum" value="number" checked>
+            <label for="mode1" onmouseover="responsiveVoice.speak('Pursuing a Masters degree (in # of students)','US English Male');" onmouseleave="responsiveVoice.cancel();">Pursuing a Masters degree (in # of students)</label>
             <input type="radio" id="mode2" name="treeSum" value="percent">
-            <label for="mode2">Pursuing a Masters degree (in %)</label>
+            <label for="mode2" onmouseover="responsiveVoice.speak('Pursuing a Masters degree (in %)','US English Male');" onmouseleave="responsiveVoice.cancel();">Pursuing a Masters degree (in %)</label>
             <input type="radio" id="mode3" name="treeSum" value="male">
-            <label for="mode3">Males in College (18-24yrs)(in %)</label>
+            <label for="mode3" onmouseover="responsiveVoice.speak('Males in College (18-24yrs)(in %)','US English Male');" onmouseleave="responsiveVoice.cancel();">Males in College (18-24yrs)(in %)</label>
             <input type="radio" id="mode4" name="treeSum" value="femal">
-            <label for="mode4">Females in College (18-24yrs) (in %)</label>
+            <label for="mode4" onmouseover="responsiveVoice.speak('Females in College (18-24yrs) (in %)','US English Male');" onmouseleave="responsiveVoice.cancel();">Females in College (18-24yrs) (in %)</label>
         </div>
     </form>
 	<p></p>
     <div id="chart"></div>
 	<a name="state"></a>
     <p><br><br></p>
-    <h2 class="subtitle">Education Level of Population in Schooling: State-level Breakdown</h2>
+    <h2 class="subtitle"onmouseover="responsiveVoice.speak('Education Level of Population in Schooling: State-level Breakdown','US English Female');" onmouseleave="responsiveVoice.cancel();">Education Level of Population in Schooling: State-level Breakdown</h2>
 	
     <form id="stack-form">
         <div class="radio-toolbar">
-            <input type="radio" id="radio1" name="mode" value="bypercent" checked>
-            <label for="radio1">Students (in %)</label>
+           <input type="radio" id="radio1" name="mode" value="bypercent" checked>
+            <label for="radio1" onmouseover="responsiveVoice.speak('Students (in %)','US English Female');" onmouseleave="responsiveVoice.cancel();">Students (in %)</label>
             <input type="radio" id="radio2" name="mode" value="bycount">
-            <label for="radio2">Students (in number of people)</label>
+            <label for="radio2" onmouseover="responsiveVoice.speak('Students (in number of people)','US English Female');" onmouseleave="responsiveVoice.cancel();">Students (in number of people)</label>
     </div>
     </form>
     <div>
@@ -95,18 +92,7 @@
    Should be equal the the height of the header
  */
 </script>
-<script>
-$('label,h1,h2').mouseenter(function() { 
- 	responsiveVoice.cancel(); 
-	responsiveVoice.speak($(this).text()); 
-});
-</script>
-	<audio>
-	  <source src="assets/Sound Effect - Mouse Click.mp3"></source>
-          <source src="assets/Sound Effect - Mouse Click.ogg"></source>
-	</audio>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	
+
 </body>
-</html>
+</html> 
