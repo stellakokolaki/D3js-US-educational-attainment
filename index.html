@@ -14,6 +14,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 </head>
   <header>
+	    <header>
+	   <audio id="sound" src="beep.mp3"></audio>
+    <a onmouseover = "playSound();"></a>
+    <script>
+        function playSound() {
+          var sound = document.getElementById("sound");
+          sound.play();
+      }    
+	    
+	  </script>   
        <nav>
     <ul>
       <li><a href="#top" onmouseover="playclip();" >Top</a></li>
